@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-const showallproducts = () => {
+const ShowAllProducts = () => {
 
   const router=useRouter()
   const [products, setProducts] = useState([])
@@ -143,4 +143,4 @@ const showallproducts = () => {
   );
 };
 
-export default showallproducts;
+export default ShowAllProducts;

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Product from "@/models/Product";
 import mongoose from "mongoose";
 
-const Tshirts = ({products}) => {
+const TShirts = ({products}) => {
   return (
     <div>
       <section className="text-gray-600 body-font min-h-screen">
@@ -92,4 +92,4 @@ export async function getServerSideProps(context) {
   }
 }
 
-export default Tshirts;
+export default TShirts;

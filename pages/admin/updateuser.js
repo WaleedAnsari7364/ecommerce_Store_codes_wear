@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import Image from "next/image";
 
-const updateuser = () => {
+const UpdateUser = () => {
   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -405,4 +405,4 @@ const updateuser = () => {
   );
 };
 
-export default updateuser;
+export default UpdateUser;

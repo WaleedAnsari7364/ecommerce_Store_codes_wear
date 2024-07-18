@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const myAccount = () => {
+const MyAccount = () => {
   const router=useRouter()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -250,4 +250,4 @@ transition= {Bounce}
 }
 
 
-export default myAccount
+export default MyAccount

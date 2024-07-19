@@ -7,6 +7,7 @@ const handler = async (req, res) => {
   if (req.method == "POST") {
     let u = await User.findOne({ "email": req.body.email });
     
+    if(u){
     if (u.admin=="true") {
       const bytes=CryptoJS.AES.decrypt(u.password,process.env.AES_SECRET);
       let decryptedPass=bytes.toString(CryptoJS.enc.Utf8);
@@ -23,6 +24,10 @@ const handler = async (req, res) => {
     else{
         res.status(200).json({ success: false, error: "You Are Not An Admin" });
     }
+  }
+  else{
+    res.status(200).json({ success: false, error: "You Are Not A User" });
+  }
 
   } else {
     res.status(400).json({ error: "This method is not allowed" });

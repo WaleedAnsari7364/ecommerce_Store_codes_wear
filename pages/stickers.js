@@ -62,7 +62,7 @@ const Stickers = ({products}) => {
 }
 
 export async function getServerSideProps(context) {
-  if(!mongoose.connections[0].readyState){
+  if(!!mongoose.connections.readyState>=1){
     await mongoose.connect(process.env.MONGO_URI)
 }
   let products=await Product.find({category: 'stickers'})

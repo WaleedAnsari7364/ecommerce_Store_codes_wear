@@ -7,7 +7,7 @@ var jwt=require('jsonwebtoken');
 
 
 const handler = async (req, res) => {
-  await runMiddleware(req, res, cors);
+  //await runMiddleware(req, res, cors);
   if (req.method == "POST") {
     let u = await User.findOne({ "email": req.body.email });
     

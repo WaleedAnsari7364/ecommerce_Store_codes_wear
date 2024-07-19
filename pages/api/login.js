@@ -3,6 +3,17 @@ import connectDb from "@/middleware/mongoose";
 var CryptoJS=require("crypto-js");
 var jwt=require('jsonwebtoken');
 
+const corsHandler = (handler) => async (req, res) => {
+  if (req.method === "OPTIONS") {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    res.status(200).end();
+    return;
+  }
+  // Handle the actual request
+  return handler(req, res);
+};
 const handler = async (req, res) => {
   if (req.method == "POST") {
     let u = await User.findOne({ "email": req.body.email });

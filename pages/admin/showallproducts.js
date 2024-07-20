@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 
 const ShowAllProducts = () => {
 
+
   const router=useRouter()
   const [products, setProducts] = useState([])
 
@@ -23,6 +24,7 @@ const ShowAllProducts = () => {
       let res=await a.json()
       setProducts(res.products)
     }
+    
 
     if(!localStorage.getItem('adminuser')){
       router.push('/admin')
@@ -34,41 +36,22 @@ const ShowAllProducts = () => {
     
   }, [])
 
+  const handleLogout = () => {
+    localStorage.removeItem('adminuser');
+    router.push('/');
+  };
+
 
   return (
-    <div className="flex">
-      <div className="w-1/5 h-screen bg-gray-200 p-4 flex flex-col items-center">
-        <div className="logo mt-1 mb-20">
-          <Link href={"/admin/admindashboard"}>
-            <Image
-              src="/codes_wear_written.png"
-              width={200}
-              height={40}
-              alt="Logo"
-            />
+    <div className="flex flex-col">
+      
+        <div className="logo mt-10 mb-10 flex justify-center">
+          <Link href={'/admin/admindashboard'}>
+            <Image src="/codes_wear_written.png" width={200} height={40} alt="Logo" />
           </Link>
         </div>
-        <nav className="flex flex-col space-y-4 w-full items-center">
-          <Link
-            className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4 my-3"
-            href={"/admin/addproduct"}
-          >
-            Add a Product
-          </Link>
-          <Link
-            className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4"
-            href={"/admin/showallproducts"}
-          >
-            Show all Products
-          </Link>
-          <Link
-              className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4"
-              href={"/admin/updateuser"}
-            >
-              Update Account
-            </Link>
-        </nav>
-      </div>
+        <Link href={'/admin/admindashboard'} className='text-white bg-pink-500 border-0 py-2 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10  mx-auto'>Return to Dashboard</Link>
+        
       <div className="flex-1 min-h-screen">
         <h2 className="mt-6 text-center text-3xl font-extrabold leading-9 tracking-tight text-gray-900 mb-8">
           All Products

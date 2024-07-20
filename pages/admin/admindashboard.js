@@ -16,36 +16,39 @@ const AdminDashboard = () => {
     router.push('/');
   };
   return (
-    <div className="flex">
-      <div className="w-1/5 h-screen bg-gray-200 p-4 flex flex-col items-center">
-        <div className="logo mt-1 mb-20">
+    <div className="flex flex-col min-h-screen">
+      
+        <div className="logo mt-5 mb-20 flex justify-center ">
           <Link href={'/admin/admindashboard'}>
             <Image src="/codes_wear_written.png" width={200} height={40} alt="Logo" />
           </Link>
-        </div>
-        <nav className="flex flex-col space-y-4 w-full items-center">
-        <Link className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4" href={'/admin/addproduct'}>
-            Add a Product
-        </Link>
-        <Link className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4" href={'/admin/showallproducts'}>
-        Show all Products
-        </Link>
-        <Link className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4" href={'/admin/updateuser'}>
-        Update Account
-        </Link>
-        </nav>
-        <button onClick={handleLogout} className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4 mt-auto">
-          Log Out
-        </button>
-      </div>
-      <div className="flex-1 min-h-screen">
-        <h2 className="mt-6 text-center text-3xl font-extrabold leading-9 tracking-tight text-gray-900">
-          Dashboard
+          </div>
+         
+        <h2 className="mt-6 text-center text-3xl font-extrabold leading-9 tracking-tight text-gray-900 mb-10">
+         Admin Dashboard
         </h2>
         <div className="flex justify-center items-center">
-          {/* Add your main content here */}
+        <div className="flex flex-col">
+        <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/addproduct'}>
+            Add a Product
+        </Link>
+        <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/showallproducts'}>
+        Show all Products
+        </Link>
+        <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/updateuser'}>
+        Update Account
+        </Link>
+        
+        <button onClick={handleLogout} className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mt-auto">
+          Log Out
+        </button>
         </div>
-      </div>
+        </div>
+      
+        
+        
+     
+      
     </div>
   );
 };

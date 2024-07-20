@@ -100,7 +100,7 @@ transition= {Bounce}
         </h2>
       </div>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm px-4">
         <form onSubmit={handleSubmit} className="space-y-6" method="POST">
           <div>
             <label

@@ -160,7 +160,7 @@ const UpdateUser = () => {
   };
   return (
     <div>
-      <div className="flex">
+      <div className="flex flex-col">
         <ToastContainer
           position="top-left"
           autoClose={2000}
@@ -174,8 +174,8 @@ const UpdateUser = () => {
           theme="light"
           transition={Bounce}
         />
-        <div className="w-1/5 h-screen bg-gray-200 p-4 flex flex-col items-center">
-          <div className="logo mt-1 mb-20">
+        
+          <div className="logo mt-10 mb-10 flex justify-center">
             <Link href={"/admin/admindashboard"}>
               <Image
                 src="/codes_wear_written.png"
@@ -185,27 +185,9 @@ const UpdateUser = () => {
               />
             </Link>
           </div>
-          <nav className="flex flex-col space-y-4 w-full items-center">
-            <Link
-              className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4"
-              href={"/admin/addproduct"}
-            >
-              Add a Product
-            </Link>
-            <Link
-              className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4"
-              href={"/admin/showallproducts"}
-            >
-              Show all Products
-            </Link>
-            <Link
-              className="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg text-center w-3/4"
-              href={"/admin/updateuser"}
-            >
-              Update Account
-            </Link>
-          </nav>
-        </div>
+
+          <Link href={'/admin/admindashboard'} className='text-white bg-pink-500 border-0 py-2 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10  mx-auto'>Return to Dashboard</Link>
+          
         <div className="flex-1 min-h-screen">
           <div className="flex justify-center items-center">
             <div className="container px-2 sm:m-auto min-h-screen">
@@ -213,8 +195,8 @@ const UpdateUser = () => {
                 Update Account
               </h2>
               <h3 className="text-xl font-bold mt-10 mx-2">Personal Details</h3>
-              <div className="mx-auto flex my-2">
-                <div className="px-2 w-1/2">
+              <div className="mx-auto md:flex-row flex flex-col my-2">
+                <div className="px-2 md:w-1/2">
                   <div className="mb-4">
                     <label
                       htmlFor="name"
@@ -233,13 +215,13 @@ const UpdateUser = () => {
                   </div>
                 </div>
 
-                <div className="px-2 w-1/2">
+                <div className="px-2 md:w-1/2">
                   <div className="mb-4">
                     <label
                       htmlFor="email"
                       className="leading-7 text-sm text-gray-600"
                     >
-                      Email (cannot be updated)
+                      Email
                     </label>
 
                     {user && user.email ? (
@@ -333,8 +315,8 @@ const UpdateUser = () => {
 
               <h3 className="font-bold text-xl my-2 mx-2">Change Password</h3>
 
-              <div className="mx-auto flex my-2">
-                <div className="px-2 w-1/2">
+              <div className="mx-auto md:flex-row flex flex-col my-2">
+                <div className="px-2 md:w-1/2">
                   <div className="mb-4">
                     <label
                       htmlFor="password"
@@ -353,7 +335,7 @@ const UpdateUser = () => {
                   </div>
                 </div>
 
-                <div className="px-2 w-1/2">
+                <div className="px-2 md:w-1/2">
                   <div className="mb-4">
                     <label
                       htmlFor="npassword"
@@ -371,7 +353,7 @@ const UpdateUser = () => {
                     />
                   </div>
                 </div>
-                <div className="px-2 w-1/2">
+                <div className="px-2 md:w-1/2">
                   <div className="mb-4">
                     <label
                       htmlFor="cpassword"

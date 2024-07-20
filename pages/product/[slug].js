@@ -250,10 +250,10 @@ const Slug = ({buyNow,addToCart,product,variants,error}) => {
                 {product.availableQty<=0 && <span className="title-font font-medium text-2xl text-gray-900">
                   OUT OF STOCK !!!    
                 </span>}
-                <button disabled={product.availableQty<=0} onClick={()=>buyNow(slug,1,product.price,product.title,size,color)} className="disabled:bg-pink-300 flex ml-8 text-white bg-pink-500 border-0 py-2 md:px-6 focus:outline-none hover:bg-pink-600 rounded">
+                <button disabled={product.availableQty<=0} onClick={()=>buyNow(slug,1,product.price,product.title,size,color)} className="disabled:bg-pink-300 flex ml-8 text-white bg-pink-500 border-0 py-2 px-2  md:px-6 focus:outline-none hover:bg-pink-600 rounded">
                   Buy Now
                 </button>
-                <button disabled={product.availableQty<=0} onClick={()=>{addToCart(slug,1,product.price,product.title,size,color)}} className="disabled:bg-pink-300 flex ml-4 text-white bg-pink-500 border-0 py-2 md:px-6 focus:outline-none hover:bg-pink-600 rounded">
+                <button disabled={product.availableQty<=0} onClick={()=>{addToCart(slug,1,product.price,product.title,size,color)}} className="disabled:bg-pink-300 flex ml-4 text-white bg-pink-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-pink-600 rounded">
                   Add To Cart
                 </button>
                 

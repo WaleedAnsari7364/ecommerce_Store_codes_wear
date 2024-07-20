@@ -85,35 +85,41 @@ const Checkout = ({}) => {
       setPrice('')
   }
   
-  const handleChange=async (e)=>{
-    if(e.target.name=='title'){
-      setTitle(e.target.value)
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    switch (name) {
+      case 'title':
+        setTitle(value);
+        break;
+      case 'slug':
+        setSlug(value);
+        break;
+      case 'color':
+        setColor(value);
+        break;
+      case 'size':
+        setSize(value);
+        break;
+      case 'category':
+        setCategory(value);
+        break;
+      case 'price':
+        setPrice(value);
+        break;
+      case 'quantity':
+        setQuantity(value);
+        break;
+      case 'image':
+        setImage(value);
+        break;
+      case 'desc':
+        setDesc(value);
+        break;
+      default:
+        break;
     }
-    else if(e.target.name=='slug'){
-      setSlug(e.target.value)
-    }
-    else if(e.target.name=='color'){
-      setColor(e.target.value)
-    }
-    else if(e.target.name=='size'){
-      setSize(e.target.value)
-    }
-    else if(e.target.name=='category'){
-      setCategory(e.target.value)
-    }
-    else if(e.target.name=='price'){
-      setPrice(e.target.value)
-    }
-    else if(e.target.name=='quantity'){
-      setQuantity(e.target.value)
-    }
-    else if(e.target.name=='image'){
-      setImage(e.target.value)
-    }
-    else if(e.target.name=='desc'){
-      setDesc(e.target.value)
-    }
-}
+    console.log(category)
+  };
 const handleLogout = () => {
   localStorage.removeItem('adminuser');
   router.push('/');
@@ -191,7 +197,13 @@ transition= {Bounce}
             <div className="px-2 w-1/2">
               <div className="mb-4">
               <label htmlFor="category" className="leading-7 text-sm text-gray-600">Category</label>
-              <input onChange={handleChange} value={category} type="text" id="category" name="category" className="w-full bg-white rounded border border-gray-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+              <select onChange={handleChange} value={category} id="category" name="category" className="w-full bg-white rounded border border-gray-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    <option value="">Select a category</option>
+                    <option value="tshirt">Tshirt</option>
+                    <option value="mugs">Mugs</option>
+                    <option value="stickers">Stickers</option>
+                    <option value="hoodies">Hoodies</option>
+                  </select>
               </div>
             </div>
     

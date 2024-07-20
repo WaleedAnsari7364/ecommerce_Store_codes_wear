@@ -3,7 +3,7 @@ import Cors from 'cors';
 // Initializing the cors middleware
 const cors = Cors({
   methods: ['GET', 'HEAD'],
-  origin: 'https://codewear5195.netlify.app', // Allow only this origin
+  origin: '*', // Allow only this origin
 });
 
 // Helper method to wait for middleware to execute before continuing

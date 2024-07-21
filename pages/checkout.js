@@ -240,7 +240,7 @@ transition= {Bounce}
       </div>
 
       <div className="mx-4">
-      <Link href={'/checkout'}><button disabled={disabled} onClick={initiateOrder} className="disabled:bg-pink-300 flex mx-auto mt-6 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"><IoBagCheckOutline className='m-1'/>Pay PKR {subTotal}</button></Link>
+      <Link href={'/checkout'}><button disabled={disabled} onClick={initiateOrder} className="disabled:bg-pink-300 flex mx-auto mt-6 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"><IoBagCheckOutline className='m-1'/>Place Order PKR {subTotal}</button></Link>
       </div>
 
 

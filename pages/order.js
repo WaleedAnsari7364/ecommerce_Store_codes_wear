@@ -6,10 +6,16 @@ import mongoose from "mongoose";
 const MyOrder = ({order}) => {
   const products=order.products
   const [date, setDate] = useState()
+  const [tracking, setTracking] = useState(false)
   useEffect(() => {
     const d=new Date(order.createdAt)
     setDate(d)
+    setTracking(false)
   }, [])
+
+  const showTracking=()=>{
+    setTracking(true)
+  }
   
   return (
     <section className="text-gray-600 body-font overflow-hidden min-h-screen">
@@ -40,18 +46,24 @@ const MyOrder = ({order}) => {
            {Object.keys(products).map((key)=>{
               return <div key={key} className="flex border-t border-gray-200 py-2">
               <span className="text-gray-500 w-1/3">{products[key].name} ({products[key].size}/{products[key].variant})</span>
-              <span className="m-auto text-gray-900 w-1/3">{products[key].qty}</span>
-              <span className="m-auto text-gray-900 w-1/3">{products[key].price} X {products[key].qty} = {products[key].price * products[key].qty}</span>
+              <span className="m-auto text-gray-900 md:w-1/3">{products[key].qty}</span>
+              <span className="m-auto text-gray-900 md:w-1/3">{products[key].price} X {products[key].qty} = {products[key].price * products[key].qty}</span>
             </div>})}
 
-            <div className="flex">
-              <span className="title-font font-medium text-2xl text-gray-900 my-14">
+            <div className="md:flex-row flex flex-col">
+              <span className="title-font font-medium text-2xl text-gray-900 mt-6 md:my-14">
                 SubTotal: PKR {order.amount}
               </span>
-              <button className="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded my-14">
+              <button onClick={showTracking} className="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded mt-6 my-3 md:my-14">
                 Track Order
               </button>
+              
             </div>
+            <span className="flex">
+              
+              {tracking &&<span className="ml-auto">Your Delivery Status:   <b>{order.deliveryStatus}</b></span>}
+            
+              </span>
           </div>
         </div>
       </div>

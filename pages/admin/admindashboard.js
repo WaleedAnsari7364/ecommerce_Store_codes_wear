@@ -35,6 +35,9 @@ const AdminDashboard = () => {
         <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/showallproducts'}>
         Show all Products
         </Link>
+        <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/showallorders'}>
+        Show all Orders
+        </Link>
         <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/updateuser'}>
         Update Account
         </Link>

@@ -36,12 +36,6 @@ const ShowAllProducts = () => {
     
   }, [])
 
-  const handleLogout = () => {
-    localStorage.removeItem('adminuser');
-    router.push('/');
-  };
-
-
   return (
     <div className="flex flex-col">
       

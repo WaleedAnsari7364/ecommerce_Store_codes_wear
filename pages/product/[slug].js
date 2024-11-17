@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Slug({ buyNow, addToCart, product, variants, error }) {
   const router = useRouter();
+  const { slug } = router.query;
   const [pin, setPin] = useState();
   const [service, setService] = useState();
   const [color, setColor] = useState();

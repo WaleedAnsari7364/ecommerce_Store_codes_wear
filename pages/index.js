@@ -8,23 +8,15 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>CodesWear-Wear The Code</title>
-        <meta name="description" content="CodesWear.com-Wear The Code" />
+        <title>SmartCart - Wear Smart</title>
+        <meta name="description" content="SmartCart.com - Wear Smart" />
       </Head>
       <div className="flex justify-center">
-        <Image src="/image_two.jpg" alt="" width={2000} height={1000} />
+        <Image src="/hero-cropped.jpg" alt="" width={2000} height={1000} />
       </div>
 
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-              CodesWear.com
-            </h1>
-            <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
-              Wear Whatever Yo Want With CodesWear.com
-            </p>
-          </div>
           <div className="flex flex-wrap -m-4">
             <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="border border-gray-200 p-6 rounded-lg">
@@ -174,9 +166,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            Button
-          </button>
         </div>
       </section>
     </div>

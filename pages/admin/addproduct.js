@@ -146,7 +146,7 @@ transition= {Bounce}
 
         <div className="logo mt-10 mb-10 flex justify-center">
           <Link href={'/admin/admindashboard'}>
-            <Image src="/codes_wear_written.png" width={200} height={40} alt="Logo" />
+            <Image src="/written.png" width={200} height={40} alt="Logo" />
           </Link>
           
         </div>

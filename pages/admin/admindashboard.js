@@ -20,7 +20,7 @@ const AdminDashboard = () => {
       
         <div className="logo mt-5 mb-20 flex justify-center ">
           <Link href={'/admin/admindashboard'}>
-            <Image src="/codes_wear_written.png" width={200} height={40} alt="Logo" />
+            <Image src="/written.png" width={200} height={40} alt="Logo" />
           </Link>
           </div>
          

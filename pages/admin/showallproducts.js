@@ -41,7 +41,7 @@ const ShowAllProducts = () => {
       
         <div className="logo mt-10 mb-10 flex justify-center">
           <Link href={'/admin/admindashboard'}>
-            <Image src="/codes_wear_written.png" width={200} height={40} alt="Logo" />
+            <Image src="/written.png" width={200} height={40} alt="Logo" />
           </Link>
         </div>
         <Link href={'/admin/admindashboard'} className='text-white bg-orange-500 border-0 py-2 px-4 focus:outline-none hover:bg-orange-600 rounded text-sm md:text-lg text-center mb-10  mx-auto'>Return to Dashboard</Link>

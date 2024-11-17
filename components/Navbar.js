@@ -66,7 +66,7 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
       >
         <div className="logo mr-auto md:mx-5 my-2 md:my-0">
           <Link href={'/'}>
-            <Image src="/codes_wear_written.png" width={200} height={40} />
+            <Image src="/written.png" width={200} height={40} />
           </Link>
         </div>
         <div className="nav">

@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <Link href={"/"} className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-              <img src="/codes_wear_written.png" alt="codeswear logo" />
+              <img src="/written.png" alt="smartcart logo" />
             </Link>
             <p className="mt-2 text-sm text-gray-500 px-4">
-              Wear The Code
+              Wear Smart
             </p>
             <p className="text-sm text-gray-500 px-4">
               Premium TShirts, Hoodies and Mugs
@@ -99,7 +99,7 @@ const Footer = () => {
         <div className="bg-gray-100">
           <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
             <p className="text-gray-500 text-sm text-center sm:text-left">
-              © 2024 CodesWear.com — All Rights Reserved
+              © 2024 SmartCart.com — All Rights Reserved
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
               <a className="text-gray-500">

@@ -12,11 +12,11 @@ export default async function handler(req, res) {
         
 
     
-    let email=`We have sent you this email in response to your request to reset your password on Codeswear.com. 
+    let email=`We have sent you this email in response to your request to reset your password on SmartCart.com. 
 
         To reset your password for <a href="${site-url}">${site-url}</a>, please follow the link below:
 
-        <a href="https://codeswear.com/forgot?token="${token}>Click Here to Reset Your Password</a>
+        <a href="https://smartcart.com/forgot?token="${token}>Click Here to Reset Your Password</a>
 
         <br/><br/>
 

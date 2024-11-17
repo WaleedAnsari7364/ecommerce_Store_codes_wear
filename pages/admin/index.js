@@ -84,7 +84,7 @@ transition= {Bounce}
       <div className='w-full flex justify-center py-5 shadow-xl sticky top-0 z-10 bg-white mb-7'>
         <div className="logo text-center">
           <Link href={'/'}>
-            <Image src="/codes_wear_written.png" width={200} height={40} alt="Logo" />
+            <Image src="/written.png" width={200} height={40} alt="Logo" />
           </Link>
         </div>
       </div>
@@ -92,7 +92,7 @@ transition= {Bounce}
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className="mx-auto h-20 w-auto"
-          src="/codes_wear_logo.png"
+          src="/logo.png"
           alt="Your Company"
         />
         <h2 className="mt-6 text-center text-3xl font-extrabold leading-9 tracking-tight text-gray-900">

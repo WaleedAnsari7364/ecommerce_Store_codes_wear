@@ -6,9 +6,8 @@ import Error from "next/error";
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Slug = ({ buyNow, addToCart, product, variants, error }) => {
+export default function Slug({ buyNow, addToCart, product, variants, error }) {
   const router = useRouter();
-  const { slug } = router.query;
   const [pin, setPin] = useState();
   const [service, setService] = useState();
   const [color, setColor] = useState();
@@ -24,7 +23,7 @@ const Slug = ({ buyNow, addToCart, product, variants, error }) => {
   const checkServiceability = async () => {
     let pins = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`);
     let pinJson = await pins.json();
-    
+
     if (Object.keys(pinJson).includes(pin)) {
       setService(true);
       toast.success('YAY! PinCode Is Serviceable', {
@@ -220,32 +219,50 @@ const Slug = ({ buyNow, addToCart, product, variants, error }) => {
   );
 };
 
-export async function getServerSideProps(context) {
-  let error = null;
+export async function getStaticPaths() {
+  // Connect to the database and fetch all product slugs
   if (!mongoose.connections[0].readyState) {
     await mongoose.connect(process.env.MONGO_URI);
   }
-  let product = await Product.findOne({ slug: context.query.slug });
-  if (product == null) {
-    return {
-      props: { error: 404 },
-    };
-  }
-  let variants = await Product.find({ title: product.title, category: product.category });
-  let colorSizeSlug = {};
-
-  for (let item of variants) {
-    if (Object.keys(colorSizeSlug).includes(item.color)) {
-      colorSizeSlug[item.color][item.size] = { slug: item.slug };
-    } else {
-      colorSizeSlug[item.color] = {};
-      colorSizeSlug[item.color][item.size] = { slug: item.slug };
-    }
-  }
+  const products = await Product.find({}, "slug");
+  const paths = products.map((product) => ({
+    params: { slug: product.slug },
+  }));
 
   return {
-    props: { error: error, product: JSON.parse(JSON.stringify(product)), variants: JSON.parse(JSON.stringify(colorSizeSlug)) },
+    paths,
+    fallback: true, // Fallback true for on-demand generation of non-prebuilt pages
   };
 }
 
-export default Slug;
+export async function getStaticProps(context) {
+  const { slug } = context.params;
+
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGO_URI);
+  }
+
+  let product = await Product.findOne({ slug });
+  if (!product) {
+    return { props: { error: 404 } };
+  }
+
+  let variants = await Product.find({ title: product.title });
+  let colorSizeSlug = {};
+
+  for (let item of variants) {
+    if (!colorSizeSlug[item.color]) {
+      colorSizeSlug[item.color] = {};
+    }
+    colorSizeSlug[item.color][item.size] = { slug: item.slug };
+  }
+
+  return {
+    props: {
+      product: JSON.parse(JSON.stringify(product)),
+      variants: JSON.parse(JSON.stringify(colorSizeSlug)),
+      error: null,
+    },
+    revalidate: 10, // Rebuild page every 10 seconds if data changes
+  };
+}

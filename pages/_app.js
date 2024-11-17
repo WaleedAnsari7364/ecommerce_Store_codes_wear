@@ -5,6 +5,12 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import LoadingBar from "react-top-loading-bar";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ['latin'], // Choose your subsets
+  weight: ['400', '700'], // Specify font weights
+});
 
 export default function App({ Component, pageProps }) {
   const [cart, setCart] = useState({})
@@ -96,7 +102,7 @@ export default function App({ Component, pageProps }) {
     router.push('/')
   }
 
-  return <>
+  return <main className={poppins.className}>
   <Head>
   <meta name="viewport" content="width=device-width , initial-scale=1.0 , minimum-scale=1.0"/>
   </Head>
@@ -109,5 +115,5 @@ export default function App({ Component, pageProps }) {
   {key && !router.pathname.startsWith('/admin') && (<Navbar logout={logout} user={user} key={key} buyNow={buyNow} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal}/>)}
   <Component buyNow={buyNow} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} {...pageProps} />;
   <Footer/>
-  </>
+  </main>
 }

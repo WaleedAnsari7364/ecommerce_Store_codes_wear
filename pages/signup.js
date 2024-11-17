@@ -156,7 +156,7 @@ transition= {Bounce}
           <div>
             <button
               type="submit"
-              className="flex w-full justify-center rounded-md bg-pink-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
+              className="flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
             >
               Sign up
             </button>
@@ -165,7 +165,7 @@ transition= {Bounce}
 
         <p className="mt-10 text-center text-sm text-gray-500">
          <span>or  </span>
-          <Link className="font-semibold leading-6 text-pink-600 hover:text-pink-500" href={'/login'}>
+          <Link className="font-semibold leading-6 text-orange-600 hover:text-orange-500" href={'/login'}>
             Log In
           </Link>
         </p>

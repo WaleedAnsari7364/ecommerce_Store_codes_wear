@@ -225,14 +225,14 @@ transition= {Bounce}
       </div>
 
       <h2 className="font-bold text-xl">2. Review Cart Items</h2>
-      <div className="sideCart  p-6 m-2 bg-pink-100">
+      <div className="sideCart  p-6 m-2 bg-orange-100">
         <ol className='list-decimal font-semibold'>
           {Object.keys(cart).length==0 && <div className='my-4 mt-4 text-center font-normal'>Your Cart Is Empty!</div>}
           
           {Object.keys(cart).map((k)=>{return<li key={k}>
             <div className="item flex my-3">
             <div className='font-semibold'>{cart[k].name} ({cart[k].size}/{cart[k].variant})</div>
-            <div className='flex items-center justify-center w-1/3 font-semibold text-lg'><FaMinusCircle onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant)}} className='text-pink-500 cursor-pointer' /><span className='mx-2'>{cart[k].qty}</span><FaPlusCircle onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant)}} className='text-pink-500 cursor-pointer' /></div>
+            <div className='flex items-center justify-center w-1/3 font-semibold text-lg'><FaMinusCircle onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant)}} className='text-orange-500 cursor-pointer' /><span className='mx-2'>{cart[k].qty}</span><FaPlusCircle onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant)}} className='text-orange-500 cursor-pointer' /></div>
             </div>
           </li>})}
         </ol>
@@ -240,7 +240,7 @@ transition= {Bounce}
       </div>
 
       <div className="mx-4">
-      <Link href={'/checkout'}><button disabled={disabled} onClick={initiateOrder} className="disabled:bg-pink-300 flex mx-auto mt-6 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"><IoBagCheckOutline className='m-1'/>Place Order PKR {subTotal}</button></Link>
+      <Link href={'/checkout'}><button disabled={disabled} onClick={initiateOrder} className="disabled:bg-orange-300 flex mx-auto mt-6 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"><IoBagCheckOutline className='m-1'/>Place Order PKR {subTotal}</button></Link>
       </div>
 
 

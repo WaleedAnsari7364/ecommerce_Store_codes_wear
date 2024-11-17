@@ -29,20 +29,20 @@ const AdminDashboard = () => {
         </h2>
         <div className="flex justify-center items-center">
         <div className="flex flex-col">
-        <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/addproduct'}>
+        <Link className="text-white bg-orange-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-orange-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/addproduct'}>
             Add a Product
         </Link>
-        <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/showallproducts'}>
+        <Link className="text-white bg-orange-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-orange-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/showallproducts'}>
         Show all Products
         </Link>
-        <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/showallorders'}>
+        <Link className="text-white bg-orange-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-orange-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/showallorders'}>
         Show all Orders
         </Link>
-        <Link className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/updateuser'}>
+        <Link className="text-white bg-orange-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-orange-600 rounded text-sm md:text-lg text-center mb-10" href={'/admin/updateuser'}>
         Update Account
         </Link>
         
-        <button onClick={handleLogout} className="text-white bg-pink-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mt-auto">
+        <button onClick={handleLogout} className="text-white bg-orange-500 border-0 py-2 px-4 md:px-8 focus:outline-none hover:bg-orange-600 rounded text-sm md:text-lg text-center mt-auto">
           Log Out
         </button>
         </div>

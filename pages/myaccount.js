@@ -211,7 +211,7 @@ transition= {Bounce}
         </div>
       </div>
 
-      <button onClick={handleUserSubmit} className=" flex my-5 mx-auto m-2 mb-5 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Submit</button>
+      <button onClick={handleUserSubmit} className=" flex my-5 mx-auto m-2 mb-5 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg">Submit</button>
        
 
       <h2 className="font-bold text-xl my-2">2. Change Password</h2>
@@ -242,7 +242,7 @@ transition= {Bounce}
 
       </div>
 
-      <button onClick={handlePasswordSubmit} className=" flex my-5 mx-auto m-2 mb-5 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Submit</button>
+      <button onClick={handlePasswordSubmit} className=" flex my-5 mx-auto m-2 mb-5 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg">Submit</button>
 
       
     </div>

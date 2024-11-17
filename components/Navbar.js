@@ -43,13 +43,13 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
             >
               <ul>
                 <Link href={'/myaccount'}>
-                  <li className="py-1 text-sm hover:text-pink-900 font-bold">My Account</li>
+                  <li className="py-1 text-sm hover:text-orange-900 font-bold">My Account</li>
                 </Link>
                 <Link href={'/orders'}>
-                  <li className="py-1 text-sm hover:text-pink-900 font-bold">My Orders</li>
+                  <li className="py-1 text-sm hover:text-orange-900 font-bold">My Orders</li>
                 </Link>
                 <a>
-                  <li onClick={logout} className="py-1 text-sm hover:text-pink-900 font-bold">
+                  <li onClick={logout} className="py-1 text-sm hover:text-orange-900 font-bold">
                     Logout
                   </li>
                 </a>
@@ -72,16 +72,16 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
         <div className="nav">
           <ul className="flex items-center space-x-6 font-bold md:text-lg">
             <Link href={'/hoodies'}>
-              <li className="hover:text-pink-500">Hoodies</li>
+              <li className="hover:text-orange-500">Hoodies</li>
             </Link>
             <Link href={'/stickers'}>
-              <li className="hover:text-pink-500">Stickers</li>
+              <li className="hover:text-orange-500">Stickers</li>
             </Link>
             <Link href={'/mugs'}>
-              <li className="hover:text-pink-500">Mugs</li>
+              <li className="hover:text-orange-500">Mugs</li>
             </Link>
             <Link href={'/tshirts'}>
-              <li className="hover:text-pink-500">Tshirts</li>
+              <li className="hover:text-orange-500">Tshirts</li>
             </Link>
           </ul>
         </div>
@@ -89,7 +89,7 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
         <div className="cart items-center absolute right-0 top-7 md:top-4 mx-5 cursor-pointer flex">
           {!user.value && (
             <Link href={'/login'}>
-              <button className="bg-pink-600 text-white text-sm rounded-md py-1 px-2 mx-2 my-1">Login</button>
+              <button className="bg-orange-600 text-white text-sm rounded-md py-1 px-2 mx-2 my-1">Login</button>
             </Link>
           )}
 
@@ -99,10 +99,10 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
 
       <div
         ref={ref}
-        className={`w-72 h-[100vh] sideCart overflow-y-scroll absolute top-0 px-8 py-10 bg-pink-100 transition-all ${sidebar ? 'right-0' : '-right-96'} z-40`}
+        className={`w-72 h-[100vh] sideCart overflow-y-scroll absolute top-0 px-8 py-10 bg-orange-100 transition-all ${sidebar ? 'right-0' : '-right-96'} z-40`}
       >
         <h2 className="font-bold text-xl text-center">Shopping Cart</h2>
-        <span onClick={toggleCart} className="absolute top-5 right-2 cursor-pointer text-pink-500 text-size text-2xl">
+        <span onClick={toggleCart} className="absolute top-5 right-2 cursor-pointer text-orange-500 text-size text-2xl">
           <IoMdCloseCircle />
         </span>
         <ol className="list-decimal font-semibold">
@@ -121,14 +121,14 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
                     onClick={() => {
                       removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant);
                     }}
-                    className="text-pink-500 cursor-pointer"
+                    className="text-orange-500 cursor-pointer"
                   />
                   <span className="mx-2">{cart[k].qty}</span>
                   <FaPlusCircle
                     onClick={() => {
                       addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant);
                     }}
-                    className="text-pink-500 cursor-pointer"
+                    className="text-orange-500 cursor-pointer"
                   />
                 </div>
               </div>
@@ -140,7 +140,7 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
           <Link href={'/checkout'}>
             <button
               disabled={Object.keys(cart).length === 0}
-              className="disabled:bg-pink-300 flex mx-auto mt-6 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"
+              className="disabled:bg-orange-300 flex mx-auto mt-6 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"
             >
               <IoBagCheckOutline className="m-1" /> Checkout
             </button>
@@ -148,7 +148,7 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
           <button
             disabled={Object.keys(cart).length === 0}
             onClick={clearCart}
-            className="disabled:bg-pink-300 flex mx-auto mt-6 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"
+            className="disabled:bg-orange-300 flex mx-auto mt-6 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"
           >
             Clear Cart
           </button>

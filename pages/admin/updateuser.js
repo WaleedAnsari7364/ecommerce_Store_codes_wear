@@ -186,7 +186,7 @@ const UpdateUser = () => {
             </Link>
           </div>
 
-          <Link href={'/admin/admindashboard'} className='text-white bg-pink-500 border-0 py-2 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10  mx-auto'>Return to Dashboard</Link>
+          <Link href={'/admin/admindashboard'} className='text-white bg-orange-500 border-0 py-2 px-4 focus:outline-none hover:bg-orange-600 rounded text-sm md:text-lg text-center mb-10  mx-auto'>Return to Dashboard</Link>
           
         <div className="flex-1 min-h-screen">
           <div className="flex justify-center items-center">
@@ -308,7 +308,7 @@ const UpdateUser = () => {
 
               <button
                 onClick={handleUserSubmit}
-                className=" flex my-5 mx-auto m-2 mb-5 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"
+                className=" flex my-5 mx-auto m-2 mb-5 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"
               >
                 Submit
               </button>
@@ -375,7 +375,7 @@ const UpdateUser = () => {
 
               <button
                 onClick={handlePasswordSubmit}
-                className=" flex my-5 mx-auto m-2 mb-5 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"
+                className=" flex my-5 mx-auto m-2 mb-5 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"
               >
                 Submit
               </button>

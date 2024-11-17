@@ -54,7 +54,7 @@ const MyOrder = ({order}) => {
               <span className="title-font font-medium text-2xl text-gray-900 mt-6 md:my-14">
                 SubTotal: PKR {order.amount}
               </span>
-              <button onClick={showTracking} className="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded mt-6 my-3 md:my-14">
+              <button onClick={showTracking} className="flex ml-auto text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded mt-6 my-3 md:my-14">
                 Track Order
               </button>
               

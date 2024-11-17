@@ -71,7 +71,7 @@ const ShowAllOrders = () => {
             <Image src="/codes_wear_written.png" width={200} height={40} alt="Logo" />
           </Link>
         </div>
-        <Link href={'/admin/admindashboard'} className='text-white bg-pink-500 border-0 py-2 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm md:text-lg text-center mb-10  mx-auto'>Return to Dashboard</Link>
+        <Link href={'/admin/admindashboard'} className='text-white bg-orange-500 border-0 py-2 px-4 focus:outline-none hover:bg-orange-600 rounded text-sm md:text-lg text-center mb-10  mx-auto'>Return to Dashboard</Link>
         
       <div className="flex-1 min-h-screen">
         <h2 className="mt-6 text-center text-3xl font-extrabold leading-9 tracking-tight text-gray-900 mb-8">

@@ -105,6 +105,9 @@ const ShowAllOrders = () => {
                             Amount
                           </th>
                           <th scope="col" className="px-6 py-4">
+                            Date
+                          </th>
+                          <th scope="col" className="px-6 py-4">
                             Status
                           </th>
                           <th scope="col" className="px-6 py-4">
@@ -148,6 +151,9 @@ const ShowAllOrders = () => {
                               </td>
                               <td className="whitespace-nowrap px-6 py-4">
                                 {item.amount}
+                              </td>
+                              <td className="whitespace-nowrap px-6 py-4">
+                                {new Date(item.createdAt).toLocaleDateString()}
                               </td>
                               <td className="whitespace-nowrap px-6 py-4">
                               <select

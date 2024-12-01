@@ -42,10 +42,7 @@ const Signup = () => {
     })
     let response=await res.json()
     console.log(response)
-
-    setName('')
-    setEmail('')
-    setPassword('')
+    if (response.success) {
     toast.success('Account has been created!', {
       position: "top-left",
       autoClose: 2000,
@@ -57,6 +54,22 @@ const Signup = () => {
       theme: "light",
       transition: Bounce,
       });
+      setName('')
+      setEmail('')
+      setPassword('')
+    } else {
+      toast.error(response.error, {
+        position: "top-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
+      }
   }
   return (
 
